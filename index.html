@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="acadent">
 
 <head>
 
@@ -9,9 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap Core CSS -->
+    <title>Acadent - dental clinic in Novaliches Proper (bayan), Quezon city</title>
+    <meta name="description" content="Get the best deals on dental treatments from Acadent Care Clinic located in Novaliches Proper (bayan), Novaliches Quezon City.">
+    <!-- Bootstrap Core CSS --> 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
@@ -38,7 +38,7 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top">Start Bootstrap</a>
+                <a href="#top">Acadent</a>
             </li>
             <li>
                 <a href="#top">Home</a>
@@ -61,10 +61,11 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Start Bootstrap</h1>
-            <h3>Free Bootstrap Themes &amp; Templates</h3>
+            <h1><img src="img/logo.png" alt=""></h1>
+            <h3>Dental Care Clinic</h3>
+         
             <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <a href="#about" class="btn btn-dark btn-lg">Explore site</a>
         </div>
     </header>
 
@@ -73,8 +74,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                    <h2>Dental care clinic in Novaliches, Quezon City</h2>
+                    <p class="lead">We’re committed to providing exceptional dental health care for you. <br> Because at Acadent Dental care clinic, when <strong>you smile, we smile</strong> </p>
                 </div>
             </div>
             <!-- /.row -->
@@ -87,62 +88,22 @@
     <section id="services" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
+                <div class="col-lg-10 col-lg-offset-1" ng-controller="myController">
                     <h2>Our Services</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-3 col-sm-6" ng-repeat="service in services">
                             <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>{{ service.name }}</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>
+                                    {{ service.description }}
+                                </p>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
+                        
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -156,7 +117,8 @@
     <!-- Callout -->
     <aside class="callout">
         <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
+            <h1>Got Dental Problems?</h1>
+            <h2>Talk to us: 09174398033 / (02) 501-8732</h2>
         </div>
     </aside>
 
@@ -165,40 +127,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
+                    <h2>The Clinic</h2>
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
+                                <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
+                                <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
+                                <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
+                               <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
                             </div>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
+                    <!-- <a href="#" class="btn btn-dark">View More Items</a> -->
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -212,17 +166,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                    <h3>We would love to connect with you. Like and Follow us!</h3>
+                    <a target="_blank" href="https://www.facebook.com/acadentPH/" class="btn btn-lg btn-light">Facebook</a>
+                    <a target="_blank" href="https://twitter.com/acadentdental" class="btn btn-lg btn-dark">Twitter</a>
                 </div>
             </div>
         </div>
     </aside>
+<!-- 
+https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed
 
+ -->
     <!-- Map -->
     <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+       <!--  <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/place/Acadent+Dental+Care+Clinic/@14.72203,121.037469,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x2ebcd3c0172d6f68?hl=en&amp;output=embed"></iframe> -->
+
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3858.833033165753!2d121.037469!3d14.72203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2ebcd3c0172d6f68!2sAcadent+Dental+Care+Clinic!5e0!3m2!1sen!2s!4v1416200249171"></iframe>
         <br />
         <small>
             <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
@@ -235,28 +194,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
+                    <h4><strong>Acadent Dental Care Clinic</strong>
                     </h4>
-                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    <p>237 Gen Luis St., Corner Mendoza Compound <br> Novaliches Proper (bayan), Novaliches, Quezon City</p>
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                        <li><i class="fa fa-phone fa-fw"></i> 09174398033 / (02) 501-8732</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:acadentph@gmail.com">acadentph@gmail.com</a>
                         </li>
                     </ul>
                     <br>
                     <ul class="list-inline">
                         <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            <a href="https://www.facebook.com/acadentPH/"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                            <a href="https://twitter.com/acadentdental"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="text-muted">Copyright &copy; acadentdentalclinic.com 2014</p>
                 </div>
             </div>
         </div>
@@ -267,7 +223,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+    <script src="bower_components/angular/angular.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script>
     // Closes the sidebar menu
@@ -298,6 +254,23 @@
             }
         });
     });
+
+
+    angular.module('acadent',[]).controller('myController', function($scope){
+        $scope.services = [
+        {"name":"Dental Braces","description":"Orthodontic treatment for straightening teeth, correct 'bad bite', close gaps and bring teeth and lips to proper alignment."},
+        {"name":"Dentures","description":"We have our own dental laboratory to ensure that dentures are fitted well, processed well and fast. Processing time is 3 days max"},
+        {"name":"Dental Cleaning","description":"Patients are advised to undergo dental cleaning atleast 2x a year to avoid the progression of periodental diseases and gingivitis."},
+        {"name":"Dental Bridges","description":"Used to 'bridge' the gap made by one or more missing tooth. Bridges help restore ability to chew properly and restore smile."},
+        {"name":"Dental Crowns","description":"A crown is used to cover or 'cap' a damaged tooth. Used in strengthening a damaged tooth, improve its appearance, shape or alignment."},
+        {"name":"Root Canal Treatment","description":"Treatment to repair and save a badly damaged or infected tooth instead of removing it by removing infected pulp and replacing it with filling."},
+        {"name":"Teeth Whitening","description":"A common cosmetic dentistry treatment for removing stains and discoloration of your teeth. "},
+        {"name":"Invisalign","description":"If you want to straighten your teeth without using braces, try Invisalign which uses a set of clear aligners that moves your teeth to a desirable position"}];
+
+
+    });
+
+
     </script>
 
 </body>
