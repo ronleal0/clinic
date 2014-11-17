@@ -94,7 +94,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6" ng-repeat="service in services">
                             <div class="service-item">
-                            </span>
+                           
                                 <h4>
                                     <strong>{{ service.name }}</strong>
                                 </h4>
@@ -103,7 +103,10 @@
                                 </p>
                             </div>
                         </div>
-                        
+                        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  View all services
+</button>
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -114,6 +117,36 @@
         <!-- /.container -->
     </section>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Acadent Dental Services</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+            <li class="list-group-item">Dental Braces</li>
+            <li class="list-group-item">Dentures</li>
+            <li class="list-group-item">Dental Cleaning/Oral Prophylaxis</li>
+            <li class="list-group-item">Dental Bridges</li>
+            <li class="list-group-item">Dental Crowns</li>
+            <li class="list-group-item">Root Canal Treatment</li>
+            <li class="list-group-item">Teeth Whitening</li>
+            <li class="list-group-item">Invisalign®</li>
+            <li class="list-group-item">Tooth Extraction</li>
+            <li class="list-group-item">Tooth Color Restoration</li>
+            <li class="list-group-item">Dental Xrays</li>
+        </ul>
+        <p>Inquire about our services now. Call or Text: 09174398033 / (02) 501-8732 </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>   
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Callout -->
     <aside class="callout">
         <div class="text-vertical-center">
@@ -259,7 +292,7 @@ https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twi
     angular.module('acadent',[]).controller('myController', function($scope){
         $scope.services = [
         {"name":"Dental Braces","description":"Orthodontic treatment for straightening teeth, correct 'bad bite', close gaps and bring teeth and lips to proper alignment."},
-        {"name":"Dentures","description":"We have our own dental laboratory to ensure that dentures are fitted well, processed well and fast. Processing time is 3 days max"},
+        {"name":"Dentures","description":"We have our own dental laboratory to ensure that dentures are fitted well, processed well and fast. Processing time is 1 week max"},
         {"name":"Dental Cleaning","description":"Patients are advised to undergo dental cleaning atleast 2x a year to avoid the progression of periodental diseases and gingivitis."},
         {"name":"Dental Bridges","description":"Used to 'bridge' the gap made by one or more missing tooth. Bridges help restore ability to chew properly and restore smile."},
         {"name":"Dental Crowns","description":"A crown is used to cover or 'cap' a damaged tooth. Used in strengthening a damaged tooth, improve its appearance, shape or alignment."},
